@@ -7,7 +7,7 @@ FROM alpine/git:2.43.0 as download
 #       of the wget command if you're using a model from CivitAI.
 RUN apk add --no-cache wget && \
     wget -q -O /model.safetensors https://huggingface.co/luisrguerra/real-dream-xl-pony-releases/resolve/main/pony-16-real-dream.safetensors && \
-    wget -q -O /mimimeter_2.safetensors https://civitai-delivery-worker-prod.5ac0637cfd0766c97916cefa3764fbdf.r2.cloudflarestorage.com/model/139142/mimimeter.uQ5g.safetensors?X-Amz-Expires=86400&response-content-disposition=attachment%3B%20filename%3D%22mimimeter.safetensors%22&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=e01358d793ad6966166af8b3064953ad/20250626/us-east-1/s3/aws4_request&X-Amz-Date=20250626T125133Z&X-Amz-SignedHeaders=host&X-Amz-Signature=4cf86fcca683ffccdcc6e7f715e37202c271ae93094e642b8ea5e9d83521a94d
+    wget -q -O /mimimeter_2.safetensors https://civitai-delivery-worker-prod.5ac0637cfd0766c97916cefa3764fbdf.r2.cloudflarestorage.com/model/139142/mimimeter.uQ5g.safetensors?X-Amz-Expires=86400&response-content-disposition=attachment%3B%20filename%3D%22mimimeter.safetensors%22&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=e01358d793ad6966166af8b3064953ad/20250626/us-east-1/s3/aws4_request&X-Amz-Date=20250626T165014Z&X-Amz-SignedHeaders=host&X-Amz-Signature=d210cba0242590634c4edb9453ccaa2535b744e4fd7631d697cf540cc0cf5d71
 
 # ---------------------------------------------------------------------------- #
 #                        Stage 2: Build the final image                        #
