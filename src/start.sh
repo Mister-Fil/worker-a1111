@@ -20,7 +20,7 @@ python /stable-diffusion-webui/webui.py \
   --nowebui \
   --skip-version-check \
   --no-hashing \
-#  --cors-allow-origins=* \
+  --cors-allow-origins=* \
   --no-download-sd-model &
 
 echo "Starting RunPod Handler"
