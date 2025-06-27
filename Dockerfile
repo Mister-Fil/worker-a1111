@@ -3,10 +3,9 @@
 # ---------------------------------------------------------------------------- #
 FROM alpine/git:2.49.0 AS download
 
-ARG CIVITAI_TOKEN
 RUN apk add --no-cache wget curl && \
     wget -q -O /model.safetensors https://huggingface.co/luisrguerra/real-dream-xl-pony-releases/resolve/main/pony-16-real-dream.safetensors && \
-    DIRECT_URL=$(sh -c 'curl -s -H "Authorization: Bearer ${CIVITAI_TOKEN}" "https://civitai.com/api/download/models/1891887"')  && \
+    DIRECT_URL=$(sh -c 'curl -s -H "Authorization: Bearer ea752a8d247748a3db45cf86d8f4684c "https://civitai.com/api/download/models/1891887"')  && \
     wget -q --trust-server-names -O /mimimeter_2.safetensors "$DIRECT_URL" && \
     apk del curl && \
     rm -rf /var/cache/apk/*
