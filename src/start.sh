@@ -24,4 +24,4 @@ python /stable-diffusion-webui/webui.py \
   --no-download-sd-model &
 
 echo "Starting RunPod Handler"
-python -u /handler.py
+#python -u /handler.py
