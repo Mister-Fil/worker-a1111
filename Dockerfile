@@ -30,7 +30,7 @@ RUN mkdir -p /stable-diffusion-webui/models/Stable-diffusion /stable-diffusion-w
     # Основная модель
 #    wget -q -O /stable-diffusion-webui/models/Stable-diffusion/model.safetensors https://huggingface.co/luisrguerra/real-dream-xl-pony-releases/resolve/main/pony-16-real-dream.safetensors  && \
     # LoRA модель 1
-    DIRECT_URL=$(sh -c "curl -s -H \"Authorization: Bearer ea752a8d247748a3db45cf86d8f4684c\" https://civitai.com/api/download/models/1957537")  && \
+    DIRECT_URL=$(sh -c "curl -s -H \"Authorization: Bearer ea752a8d247748a3db45cf86d8f4684c\" https://civitai.com/api/download/models/1920523")  && \
     wget -q --trust-server-names -O /model.safetensors "$DIRECT_URL" && \
     # LoRA модель 2
     DIRECT_URL=$(sh -c "curl -s -H \"Authorization: Bearer ea752a8d247748a3db45cf86d8f4684c\" https://civitai.com/api/download/models/1891887")  && \
