@@ -39,3 +39,10 @@ RUN mkdir -p /stable-diffusion-webui/models/Stable-diffusion /stable-diffusion-w
     apt-get autoremove -y && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+COPY test_input.json .
+
+ADD src .
+
+RUN chmod +x /start.sh
+CMD /start.sh
