@@ -28,3 +28,28 @@ Here's an example payload to generate an image:
   }
 }
 ```
+
+```shell
+curl -H "Authorization: Bearer ea752a8d247748a3db45cf86d8f4684c" \
+"https://civitai.com/api/download/models/1891887"
+```
+
+```shell
+wget -q -O /mimimeter_2.safetensors "https://civitai-delivery-worker-prod.5ac0637cfd0766c97916cefa3764fbdf.r2.cloudflarestorage.com/model/139142/mimimeter.uQ5g.safetensors?X-Amz-Expires=86400&response-content-disposition=attachment%3B%20filename%3D%22mimimeter.safetensors%22&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=e01358d793ad6966166af8b3064953ad/20250627/us-east-1/s3/aws4_request&X-Amz-Date=20250627T115344Z&X-Amz-SignedHeaders=host&X-Amz-Signature=3dca8b3855056e163bfd244411738f999d82fc513197d203c659d7c47383fbaa"
+```
+```shell
+curl -s -L -H "Authorization: Bearer ea752a8d247748a3db45cf86d8f4684c" "https://civitai.com/api/download/models/1891887"
+```
+
+```shell
+docker build --platform linux/amd64 --tag misterfil/worker-a1111 .
+
+docker build --platform linux/amd64 --tag misterfil/worker-a1111:latest --build-arg CIVITAI_TOKEN=ea752a8d247748a3db45cf86d8f4684c .
+
+docker push misterfil/worker-a1111:latest
+
+docker run -it misterfil/worker-a1111:latest
+docker run --gpus all -it misterfil/worker-a1111:latest
+docker run --gpus all -p 3000:3000 -it misterfil/worker-a1111:latest
+
+```

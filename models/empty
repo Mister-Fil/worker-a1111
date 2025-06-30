@@ -1,0 +1,1 @@
+ln -s /srv/ai/stable-diffusion-webui/models/Stable-diffusion/202506/cyberrealisticPony_v120.safetensors /srv/app/app001/model.safetensors
