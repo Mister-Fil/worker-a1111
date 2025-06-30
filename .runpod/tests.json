@@ -7,8 +7,8 @@
         "negative_prompt": "blurry, bad quality",
         "width": 512,
         "height": 512,
-        "num_inference_steps": 20,
-        "guidance_scale": 7.5,
+        "num_inference_steps": 16,
+        "guidance_scale": 4.0,
         "seed": 42
       },
       "timeout": 10000
